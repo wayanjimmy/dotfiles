@@ -1,0 +1,25 @@
+alias art='php artisan'
+alias yu='youtube-dl'
+alias pingg='ping google.com'
+
+alias tmcp="tmux show-buffer | pbcopy"
+
+alias dimg="docker images"
+alias dps="docker ps"
+alias dc="docker-compose"
+alias ds="docker stop (docker ps -aq)"
+alias dtink="docker-compose exec app php artisan tinker"
+alias dbash="docker-compose exec app bash"
+alias adminer:start='docker run -e "ADMINER_PLUGINS=dump-json" -p 8080:8080 -d adminer'
+
+alias gb="git branch"
+alias gum="git pull upstream master"
+alias gud="git pull upstream develop" 
+alias gco="git checkout"
+alias gst="git status"
+
+alias ls="exa -l"
+
+alias ..="cd .."
+alias ...="cd ../.."
+
