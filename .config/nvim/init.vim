@@ -113,15 +113,10 @@ let g:prettier#autoformat = 1
 
 " vim plug
 call plug#begin('~/.config/nvim/plugged')
-Plug 'elixir-editors/vim-elixir'
 Plug 'tpope/vim-vinegar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-go', { 'do': 'make'}
-"Plug 'fatih/vim-go'
-"Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'tpope/vim-rails'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'

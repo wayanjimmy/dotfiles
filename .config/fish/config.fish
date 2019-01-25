@@ -23,8 +23,9 @@ set fish_greeting ""
 source ~/.fish_aliases
 source ~/.fish_variables
 
-nvm use node > /dev/null 2>&1
-
 set -g fish_user_paths "/usr/local/opt/llvm@6/bin" $fish_user_paths
 set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
+
+set -g -x PATH $PATH $HOME/.fnm/current/bin $PATH
+
