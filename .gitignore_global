@@ -1,0 +1,40 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+tags
+find
+
+.elixir_ls/
+
+# Fucking idea stuff #
+######################
+/.idea
+/.phpintel
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# logs and databases #
+# ######################
+*.log
+*.sqlite
+
+# Ignore Map files #
+# ######################
+*.map
+
+*.php_cs.cache
+/.phpcd
+scratch.md
+
