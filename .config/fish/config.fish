@@ -4,6 +4,8 @@ set -g -x PATH /usr/local/bin $PATH
 set -g -x ANDROID_HOME $HOME/Library/Android/sdk
 set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
+set -U GOPATH $HOME/go
+set -g -x PATH $PATH $GOPATH/bin
 
 set -U EDITOR nvim
 
@@ -14,6 +16,8 @@ set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 set -g -x PATH $PATH $HOME/.composer/vendor/bin
 
 set -g fish_user_paths "/usr/local/bin" $fish_user_paths
+
+set -g -x PATH $PATH $HOME/.deno/bin
 
 source (pyenv init -|psub)
 source (rbenv init -|psub)
@@ -27,5 +31,6 @@ set -g fish_user_paths "/usr/local/opt/llvm@6/bin" $fish_user_paths
 set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
 set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 
-set -g -x PATH $PATH $HOME/.fnm/current/bin $PATH
+# eval (fnm env --fish --use-on-cd)
+fnm env --use-on-cd | source
 

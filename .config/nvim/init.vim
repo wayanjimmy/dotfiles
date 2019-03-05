@@ -130,9 +130,11 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'nelsyeung/twig.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'prettier/vim-prettier', { 
 	\ 'do': 'yarn install', 
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end()
 
 colorscheme onedark
