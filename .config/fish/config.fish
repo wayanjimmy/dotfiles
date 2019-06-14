@@ -4,8 +4,6 @@ set -g -x PATH /usr/local/bin $PATH
 set -g -x ANDROID_HOME $HOME/Library/Android/sdk
 set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
-set -U GOPATH $HOME/go
-set -g -x PATH $PATH $GOPATH/bin
 
 set -U EDITOR nvim
 
@@ -34,3 +32,10 @@ set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 # eval (fnm env --fish --use-on-cd)
 fnm env --use-on-cd | source
 
+# fnm
+set PATH $HOME/.fnm $PATH
+fnm env --multi | source
+
+# golang
+set -x -U GOPATH $HOME/go
+# set -g -x PATH $PATH $GOPATH/bin

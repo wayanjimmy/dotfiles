@@ -17,9 +17,13 @@ alias gum="git pull upstream master"
 alias gud="git pull upstream develop" 
 alias gco="git checkout"
 alias gst="git status"
+alias gl="git log --graph --decorate --oneline"
 
 alias ls="exa -l"
 
 alias ..="cd .."
 alias ...="cd ../.."
+
+alias file_server="deno run --allow-net https://deno.land/std/http/file_server.ts"
+
 

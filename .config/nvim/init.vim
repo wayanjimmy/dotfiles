@@ -78,19 +78,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-let g:deoplete#enable_at_startup = 1
-
-let g:EditorConfig_core_mode = 'external_command'
-
-"------------------Emmet----------------------"
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<tab>'
-let g:user_emmet_settings = {
-\  'javascript.jsx' : {
-\      'extends' : 'jsx',
-\  },
-\}
-autocmd FileType html,css,javascript.jsx EmmetInstall
+"let g:EditorConfig_core_mode = 'external_command'
 
 "------------------PHP-CS-------------------------"
 let g:php_cs_fixer_rules = "@PSR2,no_unused_imports" 
@@ -106,15 +94,17 @@ function! IndentWithI()
 endfunction
 nnoremap <expr> i IndentWithI()
 
-let g:flow#autoclose = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-let g:prettier#exec_cmd_async = 1
-let g:prettier#autoformat = 1
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " vim plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stephpy/vim-php-cs-fixer'
@@ -127,14 +117,9 @@ Plug 'wayanjimmy/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mattn/emmet-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'nelsyeung/twig.vim'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'prettier/vim-prettier', { 
-	\ 'do': 'yarn install', 
-	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end()
 
 colorscheme onedark
