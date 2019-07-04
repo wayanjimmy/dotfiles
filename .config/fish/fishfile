@@ -1,9 +1,9 @@
-fisherman/mono
-fisherman/done
-fisherman/humanize_duration
 jethrokuan/z
 jethrokuan/fzf
 edc/bass
 franciscolourenco/done
 jorgebucaran/FISH-await
+fishpkg/fish-humanize-duration
+fishpkg/fish-prompt-mono
+fishpkg/fish-last-job-id
 mcansh/zeit-fish-theme

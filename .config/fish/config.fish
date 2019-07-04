@@ -1,9 +1,9 @@
 set -U fish_user_paths
 
 set -g -x PATH /usr/local/bin $PATH
-set -g -x ANDROID_HOME $HOME/Library/Android/sdk
-set -g -x PATH $PATH $ANDROID_HOME/tools
-set -g -x PATH $PATH $ANDROID_HOME/platform-tools
+# set -g -x ANDROID_HOME $HOME/Library/Android/sdk
+# set -g -x PATH $PATH $ANDROID_HOME/tools
+# set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 
 set -U EDITOR nvim
 
@@ -25,11 +25,10 @@ set fish_greeting ""
 source ~/.fish_aliases
 source ~/.fish_variables
 
-set -g fish_user_paths "/usr/local/opt/llvm@6/bin" $fish_user_paths
-set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
+# set -g fish_user_paths "/usr/local/opt/llvm@6/bin" $fish_user_paths
+# set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
+# set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 
-# eval (fnm env --fish --use-on-cd)
 fnm env --use-on-cd | source
 
 # fnm
@@ -38,4 +37,12 @@ fnm env --multi | source
 
 # golang
 set -x -U GOPATH $HOME/go
-# set -g -x PATH $PATH $GOPATH/bin
+set -g -x PATH $PATH $GOPATH/bin
+
+set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+
+direnv hook fish | source
+
+# kitty + complete setup fish | source
