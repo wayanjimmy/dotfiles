@@ -17,7 +17,7 @@ alias gum="git pull upstream master"
 alias gud="git pull upstream develop" 
 alias gco="git checkout"
 alias gst="git status"
-alias gl="git log --graph --decorate --oneline"
+alias gr="git log --graph --decorate --oneline"
 
 alias ls="exa -l"
 

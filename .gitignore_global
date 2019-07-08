@@ -15,6 +15,7 @@ find
 ######################
 /.idea
 /.phpintel
+/.httptest
 
 # OS generated files #
 ######################

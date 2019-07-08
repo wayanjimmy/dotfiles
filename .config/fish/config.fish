@@ -46,3 +46,6 @@ set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 direnv hook fish | source
 
 # kitty + complete setup fish | source
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
