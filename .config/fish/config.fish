@@ -13,6 +13,8 @@ set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 
 set -g -x PATH $PATH $HOME/.composer/vendor/bin
 
+set -g -x PATH $PATH $HOME/.cargo/bin
+
 set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 
 set -g -x PATH $PATH $HOME/.deno/bin
@@ -37,7 +39,8 @@ fnm env --multi | source
 
 # golang
 set -x -U GOPATH $HOME/go
-set -g -x PATH $PATH $GOPATH/bin
+set -x -U GOBIN $GOPATH/bin
+set -g -x PATH $PATH $GOBIN
 
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
@@ -49,3 +52,7 @@ direnv hook fish | source
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
+
+# fnm
+set PATH /Users/jimboy/.fnm $PATH
+fnm env --multi | source
