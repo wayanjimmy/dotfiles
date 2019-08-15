@@ -1,5 +1,9 @@
 {
     "go.useLanguageServer": true,
     "window.zoomLevel": 0,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": true,
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    }
 }
