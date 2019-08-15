@@ -119,7 +119,9 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'joshdick/onedark.vim'
 Plug 'nelsyeung/twig.vim'
+Plug 'elixir-editors/vim-elixir'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhinz/vim-mix-format'
 call plug#end()
 
 colorscheme onedark
