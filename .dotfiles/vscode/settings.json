@@ -5,5 +5,22 @@
     "workbench.activityBar.visible": true,
     "[php]": {
         "editor.defaultFormatter": "junstyle.php-cs-fixer"
-    }
+    },
+    "terminal.integrated.fontFamily": "Cascadia Code",
+    "python.jediEnabled": false,
+    "window.nativeTabs": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabCompletion": "onlySnippets",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.accessibilitySupport": "off"
 }
