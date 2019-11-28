@@ -101,9 +101,19 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+" disable vim-go :GoDef short cut (gd)
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
+
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+
 " vim plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
+Plug 'lepture/vim-jinja'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -114,7 +124,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
 Plug 'wayanjimmy/vim-snippets'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'joshdick/onedark.vim'
@@ -122,6 +131,8 @@ Plug 'nelsyeung/twig.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-mix-format'
+Plug 'fatih/vim-go'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 colorscheme onedark
