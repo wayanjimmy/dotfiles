@@ -5,13 +5,15 @@ set -g -x PATH /usr/local/bin $PATH
 # set -g -x PATH $PATH $ANDROID_HOME/tools
 # set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 
-set -U EDITOR nvim
+set -Ux EDITOR nvim
 
 set -g -x PATH $HOME/Applications $PATH
 
 set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 
 set -g -x PATH $PATH $HOME/.composer/vendor/bin
+
+set -g -x PATH $PATH $HOME/development/flutter/bin
 
 set -g -x PATH $PATH $HOME/.cargo/bin
 
@@ -31,16 +33,11 @@ source ~/.fish_variables
 # set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
 # set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 
-fnm env --use-on-cd | source
-
-# fnm
-set PATH $HOME/.fnm $PATH
-fnm env --multi | source
-
 # golang
 set -x -U GOPATH $HOME/go
 set -x -U GOBIN $GOPATH/bin
 set -g -x PATH $PATH $GOBIN
+set -x -U JAVA_HOME "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
@@ -48,11 +45,5 @@ set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 
 direnv hook fish | source
 
-# kitty + complete setup fish | source
-
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-
-
-# fnm
-set PATH /Users/jimboy/.fnm $PATH
+set PATH $HOME/.fnm $PATH
 fnm env --multi | source
