@@ -9,17 +9,18 @@ set -Ux EDITOR nvim
 
 set -g -x PATH $HOME/Applications $PATH
 
-set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
+ set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 
-set -g -x PATH $PATH $HOME/.composer/vendor/bin
+# set -g -x PATH $PATH $HOME/.composer/vendor/bin
 
-set -g -x PATH $PATH $HOME/development/flutter/bin
+# set -g -x PATH $PATH $HOME/development/flutter/bin
 
-set -g -x PATH $PATH $HOME/.cargo/bin
+# set -g -x PATH $PATH $HOME/.cargo/bin
 
 set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 
-set -g -x PATH $PATH $HOME/.deno/bin
+set -x -U DENO_INSTALL $HOME/.local
+set -g -x PATH $PATH $DENO_INSTALL/bin
 
 source (pyenv init -|psub)
 source (rbenv init -|psub)
@@ -37,7 +38,7 @@ source ~/.fish_variables
 set -x -U GOPATH $HOME/go
 set -x -U GOBIN $GOPATH/bin
 set -g -x PATH $PATH $GOBIN
-set -x -U JAVA_HOME "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+# set -x -U JAVA_HOME "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
@@ -47,3 +48,6 @@ direnv hook fish | source
 
 set PATH $HOME/.fnm $PATH
 fnm env --multi | source
+
+fish_vi_key_bindings insert
+
