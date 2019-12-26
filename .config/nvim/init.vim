@@ -25,8 +25,8 @@ set scrolloff=3
 
 syntax on
 
-let g:python_host_prog = '/Users/jimboy/.pyenv/versions/2.7.8/bin/python2'
-let g:python3_host_prog = '/Users/jimboy/.pyenv/versions/3.7.0/bin/python3'
+let g:python_host_prog = '/Users/jimboy/.pyenv/versions/2.7.17/bin/python2'
+let g:python3_host_prog = '/Users/jimboy/.pyenv/versions/3.7.5/bin/python3'
 
 nmap <leader>ev :tabedit ~/.config/nvim/init.vim<cr>
 
@@ -133,6 +133,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-mix-format'
 Plug 'fatih/vim-go'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'jxnblk/vim-mdx-js'
 call plug#end()
 
 colorscheme onedark
