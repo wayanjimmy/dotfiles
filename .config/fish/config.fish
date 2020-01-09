@@ -15,7 +15,7 @@ set -g -x PATH $HOME/Applications $PATH
 
 # set -g -x PATH $PATH $HOME/development/flutter/bin
 
-# set -g -x PATH $PATH $HOME/.cargo/bin
+set -g -x PATH $PATH $HOME/.cargo/bin
 
 set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 
