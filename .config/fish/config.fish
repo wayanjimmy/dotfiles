@@ -9,9 +9,7 @@ set -Ux EDITOR nvim
 
 set -g -x PATH $HOME/Applications $PATH
 
- set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
-
-# set -g -x PATH $PATH $HOME/.composer/vendor/bin
+# set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 
 # set -g -x PATH $PATH $HOME/development/flutter/bin
 
@@ -34,20 +32,24 @@ source ~/.fish_variables
 # set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
 # set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 
+bass source ~/.gvm/environments/default
+
 # golang
-set -x -U GOPATH $HOME/go
+set -x -g GOPATH $HOME/go
 set -x -U GOBIN $GOPATH/bin
+set -x -U GOPRIVATE "github.com/OkadocTech/*"
+set -x -U DEPCACHEDIR $GOPATH/pkg/dep
 set -g -x PATH $PATH $GOBIN
+set -x -U CHEAT_CONFIG_PATH $HOME/.dotfiles/cheat/conf.yml
 # set -x -U JAVA_HOME "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 
-direnv hook fish | source
-
 set PATH $HOME/.fnm $PATH
 fnm env --multi | source
 
 fish_vi_key_bindings insert
+
 
