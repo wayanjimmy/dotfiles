@@ -23,8 +23,6 @@ set scrolloff=3
 
 "filetype plugin indent on
 
-syntax on
-
 let g:python_host_prog = '/Users/jimboy/.pyenv/versions/2.7.17/bin/python2'
 let g:python3_host_prog = '/Users/jimboy/.pyenv/versions/3.7.5/bin/python3'
 
@@ -193,6 +191,7 @@ noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 " vim plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -205,13 +204,17 @@ Plug 'StanAngeloff/php.vim'
 Plug 'wayanjimmy/vim-snippets'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'joshdick/onedark.vim'
+Plug 'ayu-theme/ayu-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-mix-format'
 Plug 'fatih/vim-go'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
-colorscheme onedark
+"""" enable 24bit true color
+set termguicolors
+set background=dark
+colorscheme palenight
