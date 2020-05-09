@@ -1,6 +1,6 @@
-alias art='php artisan'
-alias yu='youtube-dl'
-alias pingg='ping google.com'
+alias art="php artisan"
+alias yu="youtube-dl"
+alias pingg="ping google.com"
 
 alias tmcp="tmux show-buffer | pbcopy"
 
@@ -25,5 +25,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias file_server="deno run --allow-net https://deno.land/std/http/file_server.ts"
+
+alias mux="tmuxinator"
 
 
