@@ -56,3 +56,17 @@ fnm env --multi | source
 fish_vi_key_bindings insert
 
 
+
+# --httptoolkit--
+# This section will be reset each time a HTTP Toolkit terminal is opened
+if [ -n "$HTTP_TOOLKIT_ACTIVE" ]
+    # When HTTP Toolkit is active, we inject various overrides into PATH
+    set -x PATH "/Applications/HTTP Toolkit.app/Contents/Resources/app/httptoolkit-server/overrides/path" $PATH;
+
+    if command -v winpty >/dev/null 2>&1
+        # Work around for winpty's hijacking of certain commands
+        alias php=php
+        alias node=node
+    end
+end
+# --httptoolkit-end--
