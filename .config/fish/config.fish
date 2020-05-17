@@ -56,7 +56,6 @@ fnm env --multi | source
 fish_vi_key_bindings insert
 
 
-
 # --httptoolkit--
 # This section will be reset each time a HTTP Toolkit terminal is opened
 if [ -n "$HTTP_TOOLKIT_ACTIVE" ]
@@ -70,3 +69,8 @@ if [ -n "$HTTP_TOOLKIT_ACTIVE" ]
     end
 end
 # --httptoolkit-end--
+
+set -gx LDFLAGS "-L/usr/local/opt/libffi/lib"
+set -gx CPPFLAGS "-I/usr/local/opt/libffi/include"
+
+set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
