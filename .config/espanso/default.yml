@@ -10,8 +10,24 @@ matches:
   # Simple text replacement
   - trigger: ":espanso"
     replace: "Hi there!"
+  
+  # Markdown
+  - trigger: ":a"
+    replace: "[]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+  
+  # Zettelkasten
+  - trigger: ":zeti"
+    replace: "{{mytimestamp}}"
+    vars:
+      - name: mytimestamp
+        type: date
+        params:
+          format: "%Y%m%d%H%M%S"
 
-  # Dates
+  # Time
   - trigger: ":now"
     replace: "{{mytime}}"
     vars:
