@@ -13,7 +13,7 @@ matches:
   
   # Markdown
   - trigger: ":a"
-    replace: "[]({{clipboard}})"
+    replace: "[$|$]({{clipboard}})"
     vars:
       - name: "clipboard"
         type: "clipboard"
@@ -31,7 +31,7 @@ matches:
   - trigger: ":now"
     replace: "{{mytime}}"
     vars:
-      - name: mytime
+      - name: mytime 
         type: date
         params:
           format: "%H:%M"
