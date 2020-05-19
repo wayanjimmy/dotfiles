@@ -27,6 +27,14 @@ matches:
         params:
           format: "%Y%m%d%H%M%S"
 
+  - trigger: ":today"
+    replace: "{{mytoday}}"
+    vars:
+      - name: mytoday
+        type: date
+        params:
+          format: "%e %b %Y"
+
   # Time
   - trigger: ":now"
     replace: "{{mytime}}"
