@@ -48,3 +48,5 @@
 
 (package! ob-typescript)
 (package! prettier-js)
+(package! wakatime-mode)
+(package! org-super-agenda)

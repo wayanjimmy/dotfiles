@@ -51,3 +51,19 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+(use-package! wakatime-mode
+  :hook (after-init . global-wakatime-mode))
+
+(setq org-roam-directory "~/Labs/zettlr/")
+
+(use-package org-journal
+  :bind
+  ("C-c n j" . org-journal-new-entry)
+  :custom
+  (org-journal-dir "~/Labs/zettlr/")
+  (org-journal-date-prefix "#+TITLE: ")
+  (org-journal-file-format "%Y-%m-%d.org")
+  (org-journal-date-format "%A, %d %B %Y"))
+
+(setq org-journal-enable-agenda-integration t)
