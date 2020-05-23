@@ -17,6 +17,12 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
+
+  - trigger: ":b"
+    replace: "**$|$**"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
   
   # Zettelkasten
   - trigger: ":zeti"
