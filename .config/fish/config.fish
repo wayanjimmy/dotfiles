@@ -7,12 +7,13 @@ set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 set -g -x PATH $PATH $HOME/.emacs.d/bin
+set -g -x PATH $PATH /usr/local/opt/gnu-sed/libexec/gnubin
 
 set -Ux EDITOR nvim
 
 set -g -x PATH $HOME/Applications $PATH
 
- set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
+set -g -x PATH /usr/local/opt/mysql@5.7/bin $PATH
 
 # set -g -x PATH $PATH $HOME/development/flutter/bin
 
@@ -52,8 +53,7 @@ set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 set PATH $HOME/.fnm $PATH
 fnm env --multi | source
 
-fish_vi_key_bindings insert
-
+# fish_vi_key_bindings insert
 
 # --httptoolkit--
 # This section will be reset each time a HTTP Toolkit terminal is opened
@@ -77,3 +77,4 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
 zoxide init fish | source
 
 bass source ~/.gvm/environments/default
+set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths
