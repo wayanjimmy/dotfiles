@@ -6,6 +6,7 @@ set -g -x PATH $PATH $ANDROID_HOME/emulator
 set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
+set -g -x PATH $PATH $HOME/.emacs.d/bin
 
 set -Ux EDITOR nvim
 
