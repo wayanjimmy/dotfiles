@@ -8,6 +8,7 @@ set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 set -g -x PATH $PATH $HOME/.emacs.d/bin
 set -g -x PATH $PATH /usr/local/opt/gnu-sed/libexec/gnubin
+set -g -x PATH $PATH /Applications/Racket/bin
 
 set -Ux EDITOR nvim
 
@@ -50,9 +51,6 @@ set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
 
-set PATH $HOME/.fnm $PATH
-fnm env --multi | source
-
 # fish_vi_key_bindings insert
 
 # --httptoolkit--
@@ -78,3 +76,6 @@ zoxide init fish | source
 
 bass source ~/.gvm/environments/default
 set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths
+
+set -g -x PATH $HOME/.fnm $PATH
+fnm env --multi | source
