@@ -23,7 +23,13 @@ matches:
     vars:
       - name: "clipboard"
         type: "clipboard"
-  
+
+  - trigger: ":cbrack"
+    replace: |
+      #+BEGIN_SRC scheme
+      $|$
+      #+END_SRC
+
   # Zettelkasten
   - trigger: ":zeti"
     replace: "{{mytimestamp}}"
