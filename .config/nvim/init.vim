@@ -212,7 +212,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'fannheyward/coc-markdownlint', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 """" enable 24bit true color
