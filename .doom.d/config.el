@@ -67,3 +67,10 @@
   (org-journal-date-format "%A, %d %B %Y"))
 
 (setq org-journal-enable-agenda-integration t)
+
+(use-package org-roam-server
+  :ensure t)
+
+(setq geiser-default-implementation 'racket)
+
+(setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-1257907/bin/node")))

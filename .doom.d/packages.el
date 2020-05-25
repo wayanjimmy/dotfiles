@@ -50,3 +50,7 @@
 (package! prettier-js)
 (package! wakatime-mode)
 (package! org-super-agenda)
+(package! org-roam-server :recipe
+  (:host github
+   :repo "org-roam/org-roam-server"
+   :branch "develop"))
