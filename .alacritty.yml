@@ -60,10 +60,10 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: SimpleFullscreen
 
   # Window title
-  #title: Alacritty
+  title: Jimboy Labs
 
   # Window class (Linux/BSD only):
   #class:
