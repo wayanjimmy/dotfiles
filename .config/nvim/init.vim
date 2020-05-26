@@ -70,6 +70,7 @@ let g:fzf_colors =
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 nmap <C-p> :FZF<cr>
+nmap<leader>ff :Buffers<CR>
 
 let g:jsx_ext_required = 0
 
@@ -192,7 +193,7 @@ noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stephpy/vim-php-cs-fixer'
@@ -204,14 +205,13 @@ Plug 'StanAngeloff/php.vim'
 Plug 'wayanjimmy/vim-snippets'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'ayu-theme/ayu-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-mix-format'
 Plug 'fatih/vim-go'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jxnblk/vim-mdx-js'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 """" enable 24bit true color
