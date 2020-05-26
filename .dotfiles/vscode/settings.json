@@ -1,26 +1,64 @@
 {
+    "files.associations": {"*.blade.php": "html"},
+    "go.formatTool": "goimports",
     "go.useLanguageServer": true,
-    "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": true,
-    "[php]": {
-        "editor.defaultFormatter": "junstyle.php-cs-fixer"
-    },
-    "terminal.integrated.fontFamily": "Cascadia Code",
-    "python.jediEnabled": false,
-    "window.nativeTabs": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "A Touch of Lilac Theme",
+    "explorer.openEditors.visible": 0,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.tabCompletion": "onlySnippets",
+    "php-cs-fixer.executablePath": "/Users/jimboy/.composer/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.lastDownload": 1585591268828,
+    "editor.accessibilitySupport": "off",
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.accessibilitySupport": "off"
+    "workbench.statusBar.visible": true,
+    "editor.tabCompletion": "onlySnippets",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": 0,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#ff00ff"
+        }
+    ],
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.activityBar.visible": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "terminal.integrated.automationShell.linux": "",
+    "git.showInlineOpenFileAction": false,
+    "editor.fontSize": 14,
+    "codetour.showMarkers": true,
+    "editor.rename.enablePreview": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.fontFamily": "Jetbrains mono",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "vue-html": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": true,
+            "strings": true
+        }
+    },
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish"
 }
