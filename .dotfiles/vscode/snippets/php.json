@@ -1,0 +1,24 @@
+{
+	"Private method": {
+		"prefix": "pmet",
+		"body": [
+			"private function $1($2)",
+			"{",
+			"\t$3",
+			"}",
+			""
+		],
+		"description": "Private method"
+	},
+	"Test method": {
+		"prefix": "tmet",
+		"body": [
+			"/** @test */",
+			"public function $1($2)",
+			"{",
+			"\t$3",
+			"}"
+		],
+		"description": "Test method"
+	}
+}
