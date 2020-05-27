@@ -60,5 +60,11 @@
             "strings": true
         }
     },
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish"
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
