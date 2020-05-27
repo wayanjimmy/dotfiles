@@ -24,11 +24,21 @@ matches:
       - name: "clipboard"
         type: "clipboard"
 
+  # Github
+  - trigger: ":gpr"
+    replace: |
+      **Changes**
+      - $|$
+
+      **Related Tasks**
+      - put hyperlinks here
+          
+  # Emacs Org Mode
   - trigger: ":cbrack"
     replace: |
       #+BEGIN_SRC scheme
       $|$
-      #+END_SRC
+      #+END_SRC 
 
   # Zettelkasten
   - trigger: ":zeti"
