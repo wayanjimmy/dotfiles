@@ -71,6 +71,7 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 nmap <C-p> :FZF<cr>
 nmap<leader>ff :Buffers<CR>
+nmap<leader>e :terminal<CR>
 
 let g:jsx_ext_required = 0
 
