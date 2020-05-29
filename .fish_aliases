@@ -2,6 +2,7 @@ alias art="php artisan"
 alias yu="youtube-dl"
 alias pingg="ping google.com"
 
+alias tmux="tmux -u"
 alias tmcp="tmux show-buffer | pbcopy"
 
 alias dimg="docker images"
