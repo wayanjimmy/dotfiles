@@ -24,6 +24,28 @@ matches:
       - name: "clipboard"
         type: "clipboard"
 
+  # Sprint Retro
+  - trigger: ":kalm"
+    replace: |
+      ## {{mytoday}}
+    
+      **Keep:**
+      - $|$
+
+      **Add:**
+      - write something here...
+
+      **Less:**
+      - write something here...
+
+      **More:**
+      - write something here...
+    vars:
+      - name: mytoday
+        type: date
+        params:
+          format: "%e %b %Y"
+
   # Github
   - trigger: ":gpr"
     replace: |
