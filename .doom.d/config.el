@@ -28,12 +28,14 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq
+ org_notes "~/Labs/zettlr"
+ org-directory org_notes
+ org-roam-directory org_notes)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -54,8 +56,6 @@
 
 (use-package! wakatime-mode
   :hook (after-init . global-wakatime-mode))
-
-(setq org-roam-directory "~/Labs/zettlr/")
 
 (use-package org-journal
   :bind
