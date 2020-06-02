@@ -24,6 +24,13 @@ matches:
       - name: "clipboard"
         type: "clipboard"
 
+  # Day  eval
+  - trigger: ":deva"
+    replace: |
+      * Day eval
+      ** what I learned: $|$
+      ** memorable:
+
   # Sprint Retro
   - trigger: ":kalm"
     replace: |
