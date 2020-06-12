@@ -20,6 +20,9 @@ set shiftwidth=2
 set shiftround
 set expandtab
 set scrolloff=3
+set nocompatible
+set encoding=utf-8
+set showtabline=0
 
 "filetype plugin indent on
 
@@ -138,7 +141,7 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
@@ -190,6 +193,12 @@ noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
 noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+let g:CtrlSpaceFileEngine = '~/.config/nvim/plugged/vim-ctrlspace' . '/bin/file_engine_darwin_amd64'
+if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
+
 " vim plug
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-vinegar'
@@ -213,9 +222,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'tpope/vim-obsession'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'rakr/vim-one'
 call plug#end()
 
 """" enable 24bit true color
-set termguicolors
+"set termguicolors
 set background=dark
-colorscheme palenight
+colorscheme nord

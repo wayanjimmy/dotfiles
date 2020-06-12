@@ -38,6 +38,7 @@ source ~/.fish_variables
 # set -gx LDFLAGS "-L/usr/local/opt/llvm@6/lib"
 # set -gx CPPFLAGS "-I/usr/local/opt/llvm@6/include"
 
+
 # golang
 set -x -g GOPATH $HOME/go
 set -x -U GOBIN $GOPATH/bin
@@ -74,8 +75,9 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
 
 zoxide init fish | source
 
-bass source ~/.gvm/environments/default
-set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_paths
-
 set -g -x PATH $HOME/.fnm $PATH
 fnm env --multi | source
+
+set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_path
+
+bass source ~/.gvm/environments/default
