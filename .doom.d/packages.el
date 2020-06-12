@@ -46,11 +46,11 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
-(package! ob-typescript)
+;; (package! ob-typescript)
 (package! prettier-js)
 (package! wakatime-mode)
 (package! org-super-agenda)
 (package! org-roam-server :recipe
   (:host github
    :repo "org-roam/org-roam-server"
-   :branch "develop"))
+   :branch "master"))

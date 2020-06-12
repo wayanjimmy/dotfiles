@@ -79,3 +79,5 @@
 (setq geiser-default-implementation 'racket)
 
 (setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-3279038/bin/node")))
+
+(setq org-roam-index-file "index.org")
