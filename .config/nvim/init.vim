@@ -232,4 +232,4 @@ call plug#end()
 """" enable 24bit true color
 "set termguicolors
 set background=dark
-colorscheme nord
+colorscheme one
