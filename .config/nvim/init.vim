@@ -227,9 +227,10 @@ Plug 'tpope/vim-obsession'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 """" enable 24bit true color
 "set termguicolors
 set background=dark
-colorscheme one
+colorscheme dracula
