@@ -26,8 +26,7 @@ set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 set -x -U DENO_INSTALL $HOME/.local
 set -g -x PATH $PATH $DENO_INSTALL/bin
 
-source (pyenv init -|psub)
-source (rbenv init -|psub)
+source (pyenv init -|psub) source (rbenv init -|psub)
 
 set fish_greeting ""
 
@@ -51,6 +50,8 @@ set -x -U CHEAT_CONFIG_PATH $HOME/.dotfiles/cheat/conf.yml
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+
+set -g fish_user_paths "/usr/local/opt/coreutils/libexec/gnubin" $fish_user_paths
 
 # fish_vi_key_bindings insert
 
