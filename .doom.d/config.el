@@ -30,6 +30,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq
  org_notes "~/Labs/zettlr"
+ zot_bib "~/Labs/masterLib.bib"
  org-directory org_notes
  org-roam-directory org_notes)
 
@@ -62,7 +63,7 @@
   ("C-c n j" . org-journal-new-entry)
   ("C-c n t" . org-journal-today)
   :custom
-  (org-journal-dir "~/Labs/zettlr/")
+  (org-journal-dir org_notes)
   (org-journal-date-prefix "#+TITLE: ")
   (org-journal-file-format "%Y-%m-%d.org")
   (org-journal-date-format "%A, %d %B %Y")
@@ -78,6 +79,6 @@
 
 (setq geiser-default-implementation 'racket)
 
-(setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-3279038/bin/node")))
+(setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-6566882/bin/node")))
 
 (setq org-roam-index-file "index.org")
