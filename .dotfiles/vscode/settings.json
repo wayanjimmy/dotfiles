@@ -4,7 +4,7 @@
     "go.useLanguageServer": true,
     "editor.minimap.enabled": false,
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Nord",
     "explorer.openEditors.visible": 0,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -24,7 +24,7 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.rulers": [
         {
             "column": 80,
@@ -42,12 +42,11 @@
     },
     "terminal.integrated.automationShell.linux": "",
     "git.showInlineOpenFileAction": false,
-    "editor.fontSize": 14,
     "codetour.showMarkers": true,
     "editor.rename.enablePreview": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.fontFamily": "Jetbrains mono",
+    "editor.fontFamily": "JetBrains mono",
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
         "vue-html": "html"
