@@ -20,8 +20,6 @@ alias gco="git checkout"
 alias gst="git status"
 alias gr="git log --graph --decorate --oneline"
 
-alias ls="exa -l"
-
 alias ..="cd .."
 alias ...="cd ../.."
 
