@@ -105,3 +105,7 @@ matches:
         type: shell
         params:
           cmd: "echo Hello from your shell"
+            
+  # Org mode
+  - trigger: ":tags"
+    replace: "#+roam_tags: $|$"
