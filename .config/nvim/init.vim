@@ -110,6 +110,11 @@ let g:go_info_mode='gopls'
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
+let g:go_debug_windows = {
+      \ 'vars':       'rightbelow 60vnew',
+      \ 'stack':      'rightbelow 10new',
+\ }
+
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
 " -------------------------------------------------------------------------------------------------
@@ -228,9 +233,16 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'haishanh/night-owl.vim'
 call plug#end()
 
 """" enable 24bit true color
 "set termguicolors
-set background=dark
-colorscheme dracula
+syntax enable
+"colorscheme night-owl
+colorscheme nord
+
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
