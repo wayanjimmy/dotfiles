@@ -16,6 +16,7 @@ find
 /.idea
 /.phpintel
 /.httptest
+/.tours
 
 # OS generated files #
 ######################
