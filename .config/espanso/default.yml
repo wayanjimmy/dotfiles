@@ -109,3 +109,12 @@ matches:
   # Org mode
   - trigger: ":tags"
     replace: "#+roam_tags: $|$"
+      
+  # Monthly review
+  - trigger: ":monthly_review"
+    replace: "Monthly Review {{thismonth}}"
+    vars:
+      - name: thismonth
+        type: date
+        params:
+          format: "%b %Y"
