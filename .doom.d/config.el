@@ -74,6 +74,13 @@
 
 (setq org-journal-enable-agenda-integration t)
 
+(use-package org-fancy-priorities
+  :ensure t
+  :hook
+  (org-mode . org-fancy-priorities-mode)
+  :config
+  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
+
 (use-package org-roam-server
   :ensure t)
 
@@ -92,3 +99,21 @@
   (deft-use-filter-string-for-filename t)
   (deft-default-extension "org")
   (deft-directory org_notes))
+
+(sp-with-modes '(org-mode)
+  (sp-local-pair "*" "*")
+  (sp-local-pair "=" "="))
+
+(use-package! org-pomodoro
+  :ensure t)
+(setq org-pomodoro-finished-sound-args "-volume 0.3")
+(setq org-pomodoro-long-break-sound-args "-volume 0.3")
+(setq org-pomodoro-short-break-sound-args "-volume 0.3")
+
+(setq org-pomodoro-play-sounds t
+      org-pomodoro-short-break-sound-p t
+      org-pomodoro-long-break-sound-p t
+      org-pomodoro-short-break-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
+      org-pomodoro-long-break-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
+      org-pomodoro-finished-sound (expand-file-name "/System/Library/Sounds/Blow.aiff"))
+(put 'erase-buffer 'disabled nil)
