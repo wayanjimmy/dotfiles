@@ -24,7 +24,7 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "editor.rulers": [
         {
             "column": 80,
@@ -65,5 +65,9 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "editor.fontSize": 14
 }
