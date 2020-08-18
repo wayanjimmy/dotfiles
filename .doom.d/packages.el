@@ -52,6 +52,7 @@
 (package! org-super-agenda)
 (package! org-fancy-priorities)
 (package! org-pomodoro)
+(package! org-randomnote)
 (package! org-roam-server :recipe
   (:host github
    :repo "org-roam/org-roam-server"

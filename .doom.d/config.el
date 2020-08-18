@@ -100,20 +100,27 @@
   (deft-default-extension "org")
   (deft-directory org_notes))
 
-(sp-with-modes '(org-mode)
-  (sp-local-pair "*" "*")
-  (sp-local-pair "=" "="))
-
-(use-package! org-pomodoro
-  :ensure t)
-(setq org-pomodoro-finished-sound-args "-volume 0.3")
-(setq org-pomodoro-long-break-sound-args "-volume 0.3")
-(setq org-pomodoro-short-break-sound-args "-volume 0.3")
-
 (setq org-pomodoro-play-sounds t
       org-pomodoro-short-break-sound-p t
       org-pomodoro-long-break-sound-p t
       org-pomodoro-short-break-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
       org-pomodoro-long-break-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
-      org-pomodoro-finished-sound (expand-file-name "/System/Library/Sounds/Blow.aiff"))
+      org-pomodoro-finished-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
+      org-pomodoro-start-sound (expand-file-name "/System/Library/Sounds/Blow.aiff"))
 (put 'erase-buffer 'disabled nil)
+
+(use-package! org-pomodoro
+  :ensure t)
+(setq org-pomodoro-finished-sound-args "-volume 1.0")
+(setq org-pomodoro-long-break-sound-args "-volume 1.0")
+(setq org-pomodoro-short-break-sound-args "-volume 1.0")
+
+(custom-set-variables '(wakatime-api-key "051aaab1-d2eb-4366-b7f6-fccf41e1ef67"))
+
+(use-package org-randomnote
+  :ensure t
+  :bind ("C-c r" . org-randomnote))
+
+(load-library "find-lisp")
+(setq org-randomnote-candidates
+      (find-lisp-find-files org_notes "\.org$"))
