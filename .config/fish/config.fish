@@ -7,6 +7,7 @@ set -g -x PATH $PATH $ANDROID_HOME/tools
 set -g -x PATH $PATH $ANDROID_HOME/tools/bin
 set -g -x PATH $PATH $ANDROID_HOME/platform-tools
 set -g -x PATH $PATH $HOME/.emacs.d/bin
+set -g -x PATH $PATH $HOME/bin
 set -g -x PATH $PATH /usr/local/opt/gnu-sed/libexec/gnubin
 set -g -x PATH $PATH /Applications/Racket/bin
 
