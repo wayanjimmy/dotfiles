@@ -1,73 +1,76 @@
 {
-    "files.associations": {"*.blade.php": "html"},
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "editor.minimap.enabled": false,
-    "editor.fontLigatures": true,
-    "workbench.colorTheme": "Nord",
-    "explorer.openEditors.visible": 0,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "php-cs-fixer.executablePath": "/Users/jimboy/.composer/vendor/bin/php-cs-fixer",
-    "php-cs-fixer.lastDownload": 1585591268828,
-    "editor.accessibilitySupport": "off",
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.statusBar.visible": true,
-    "editor.tabCompletion": "onlySnippets",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "window.zoomLevel": 0,
-    "editor.rulers": [
-        {
-            "column": 80,
-            "color": "#ff00ff"
-        }
-    ],
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "workbench.activityBar.visible": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[php]": {
-        "editor.defaultFormatter": "junstyle.php-cs-fixer"
-    },
-    "terminal.integrated.automationShell.linux": "",
-    "git.showInlineOpenFileAction": false,
-    "codetour.showMarkers": true,
-    "editor.rename.enablePreview": false,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.fontFamily": "JetBrains mono",
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-        "vue-html": "html"
-    },
-    "emmet.triggerExpansionOnTab": true,
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": true,
-            "strings": true
-        }
-    },
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
-    },
-    "editor.fontSize": 14
+  "files.associations": { "*.blade.php": "html" },
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Nord",
+  "explorer.openEditors.visible": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php-cs-fixer.executablePath": "/Users/jimboy/.composer/vendor/bin/php-cs-fixer",
+  "php-cs-fixer.lastDownload": 1585591268828,
+  "editor.accessibilitySupport": "off",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.visible": true,
+  "editor.tabCompletion": "onlySnippets",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#ff00ff"
+    }
+  ],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.activityBar.visible": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "terminal.integrated.automationShell.linux": "",
+  "git.showInlineOpenFileAction": false,
+  "codetour.showMarkers": true,
+  "editor.rename.enablePreview": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.fontFamily": "JetBrains mono",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "vetur.format.defaultFormatter.html": "prettier"
 }
