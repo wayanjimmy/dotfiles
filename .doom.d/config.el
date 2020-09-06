@@ -19,7 +19,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Jetbrains mono" :size 16))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -85,6 +85,8 @@
   :ensure t)
 
 (setq geiser-default-implementation 'racket)
+
+(setq org-babel-clojure-backend 'cider)
 
 (setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-6566882/bin/node")))
 
