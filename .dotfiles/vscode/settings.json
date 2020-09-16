@@ -1,4 +1,11 @@
 {
+  "editor.renderWhitespace": "none",
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.folding": true,
+  "editor.occurrencesHighlight": false,
   "files.associations": { "*.blade.php": "html" },
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
@@ -34,6 +41,8 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
   "workbench.activityBar.visible": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabCloseButton": "off",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -72,5 +81,17 @@
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "vetur.format.defaultFormatter.html": "prettier"
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.grammar.customBlocks": {
+    "page-query": "graphql",
+    "static-query": "graphql"
+  },
+  "editor.matchBrackets": false,
+  "gitlens.mode.active": "zen",
+  "indenticator.color.dark": "rgba(255,255,255,.1)",
+  "workbench.colorCustomizations": {
+    // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference
+    "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
+  },
+  "workbench.startupEditor": "newUntitledFile"
 }
