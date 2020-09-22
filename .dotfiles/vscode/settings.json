@@ -1,4 +1,8 @@
 {
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
   "editor.renderWhitespace": "none",
   "editor.renderIndentGuides": false,
   "editor.renderLineHighlight": "none",
@@ -87,11 +91,11 @@
     "static-query": "graphql"
   },
   "editor.matchBrackets": false,
-  "gitlens.mode.active": "zen",
   "indenticator.color.dark": "rgba(255,255,255,.1)",
   "workbench.colorCustomizations": {
     // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference
     "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
   },
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "gitlens.mode.active": "review"
 }
