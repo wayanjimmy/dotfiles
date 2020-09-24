@@ -118,3 +118,7 @@ matches:
         type: date
         params:
           format: "%b %Y"
+          
+  # Database connection string
+  - trigger: ":dbds"
+    replace: "dbdriver://username:password@host:port/dbname?param1=true&param2=false"
