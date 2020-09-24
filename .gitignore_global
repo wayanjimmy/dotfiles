@@ -9,6 +9,8 @@
 tags
 find
 
+env.local
+
 .elixir_ls/
 
 # Fucking idea stuff #
