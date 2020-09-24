@@ -35,7 +35,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.rulers": [
     {
       "column": 80,
@@ -44,7 +44,7 @@
   ],
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
-  "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": false,
   "workbench.editor.showIcons": false,
   "workbench.editor.tabCloseButton": "off",
   "[html]": {
