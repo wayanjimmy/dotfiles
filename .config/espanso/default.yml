@@ -7,10 +7,6 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-  # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
-  
   # Markdown
   - trigger: ":a"
     replace: "[$|$]({{clipboard}})"
@@ -24,12 +20,18 @@ matches:
       - name: "clipboard"
         type: "clipboard"
 
+  - trigger: ":code"
+    replace: |
+      ```
+      $|$
+      ```
+
   # Day  eval
   - trigger: ":deva"
     replace: |
-      * Day eval
-      ** what I learned: $|$
-      ** memorable:
+      ## Day eval
+      - what I learned: $|$
+      - memorable:
 
   # Sprint Retro
   - trigger: ":kalm"
@@ -62,15 +64,6 @@ matches:
       **Related Tasks**
       - put hyperlinks here
           
-  # Zettelkasten
-  - trigger: ":zeti"
-    replace: "{{mytimestamp}}"
-    vars:
-      - name: mytimestamp
-        type: date
-        params:
-          format: "%Y%m%d%H%M%S"
-
   - trigger: ":today"
     replace: "{{mytoday}}"
     vars:
@@ -78,6 +71,14 @@ matches:
         type: date
         params:
           format: "%e %b %Y"
+
+  - trigger: ":dailies"
+    replace: "{{mytoday}}"
+    vars:
+      - name: mytoday
+        type: date
+        params:
+          format: "# %A, %e %B %Y"
 
   # Time
   - trigger: ":now"
@@ -96,29 +97,14 @@ matches:
         type: date
         params:
           format: "%Y-%m-%d"
-
-  # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
-            
-  # Org mode
-  - trigger: ":tags"
-    replace: "#+roam_tags: $|$"
-      
-  # Monthly review
-  - trigger: ":monthly_review"
-    replace: "Monthly Review {{thismonth}}"
-    vars:
-      - name: thismonth
-        type: date
-        params:
-          format: "%b %Y"
           
   # Database connection string
   - trigger: ":dbds"
     replace: "dbdriver://username:password@host:port/dbname?param1=true&param2=false"
+
+  - trigger: ":progress"
+    replace: "<progress value=\"{{clipboard}}\" max=\"100\">{{clipboard}}%</progress>"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"
+

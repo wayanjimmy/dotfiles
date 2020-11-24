@@ -15,7 +15,7 @@
   "go.useLanguageServer": true,
   "editor.minimap.enabled": false,
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Visual Studio Dark",
   "explorer.openEditors.visible": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -35,7 +35,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "editor.rulers": [
     {
       "column": 80,
@@ -44,7 +44,7 @@
   ],
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.editor.showIcons": false,
   "workbench.editor.tabCloseButton": "off",
   "[html]": {
@@ -70,7 +70,8 @@
       "other": true,
       "comments": true,
       "strings": true
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "[typescriptreact]": {
@@ -82,7 +83,7 @@
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "vetur.format.defaultFormatter.html": "prettier",
@@ -97,5 +98,7 @@
     "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
   },
   "workbench.startupEditor": "newUntitledFile",
-  "gitlens.mode.active": "review"
+  "gitlens.mode.active": "review",
+  "terminal.integrated.fontSize": 13,
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "unknown", "pass", "skip"]
 }

@@ -229,18 +229,16 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'tpope/vim-obsession'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-one'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'haishanh/night-owl.vim'
+Plug 'nathangrigg/vim-beancount'
 call plug#end()
 
 """" enable 24bit true color
 "set termguicolors
 syntax enable
 "colorscheme night-owl
-colorscheme nord
+colorscheme one
+set background=light
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))

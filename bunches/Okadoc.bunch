@@ -3,16 +3,10 @@
 %Alacritty
 - [tmux\\n]
 
-2Do
-- {@2}
+%Obsidian
+- {@p}
+- [today\\n]
 
-Emacs
-- {@x}
-- [fullscreen\\n]
-- [\\sql]
-
-%https://okadoc.atlassian.net/secure/RapidBoard.jspa?projectKey=OD&useStoredSettings=true&rapidView=1
-
-(do not disturb [off])
+(do not disturb [on])
 !(hide dock)
 

@@ -81,5 +81,3 @@ set -g -x PATH $HOME/.fnm $PATH
 fnm env --multi | source
 
 set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_path
-
-bass source ~/.gvm/environments/default

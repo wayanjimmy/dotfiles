@@ -29,10 +29,10 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq
- org_notes "~/Labs/zettlr"
- zot_bib "~/Labs/masterLib.bib"
+ org_notes "~/JimboyLabs/resources/brain2"
  org-directory org_notes
- org-roam-directory org_notes)
+ org-roam-directory org_notes
+ org-download-image-dir (concat org_notes "/media"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -102,7 +102,9 @@
   (deft-default-extension "org")
   (deft-directory org_notes))
 
-(setq org-pomodoro-play-sounds t
+(setq org-pomodoro-length 55
+      org-pomodoro-short-break-length 15
+      org-pomodoro-play-sounds t
       org-pomodoro-short-break-sound-p t
       org-pomodoro-long-break-sound-p t
       org-pomodoro-short-break-sound (expand-file-name "/System/Library/Sounds/Blow.aiff")
@@ -126,3 +128,7 @@
 (load-library "find-lisp")
 (setq org-randomnote-candidates
       (find-lisp-find-files org_notes "\.org$"))
+
+(use-package! md-roam ; load immediately, before org-roam
+  :config
+  (setq md-roam-file-extension-single "md"))

@@ -16,6 +16,7 @@ env.local
 # Fucking idea stuff #
 ######################
 /.idea
+.idea
 /.phpintel
 /.httptest
 /.tours
