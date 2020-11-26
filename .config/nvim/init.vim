@@ -216,7 +216,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
-Plug 'StanAngeloff/php.vim'
+"Plug 'StanAngeloff/php.vim'
 Plug 'wayanjimmy/vim-snippets'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
