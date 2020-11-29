@@ -236,9 +236,8 @@ call plug#end()
 """" enable 24bit true color
 "set termguicolors
 syntax enable
-"colorscheme night-owl
 colorscheme one
-set background=light
+set background=dark
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
