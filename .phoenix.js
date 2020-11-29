@@ -459,10 +459,6 @@ Key.on("t", CONTROL_SHIFT, function () {
   App.launch("Alacritty").focus();
 });
 
-Key.on("c", CONTROL_SHIFT, function () {
-  App.launch("Chrome").focus();
-});
-
 /**
  * Move window to space on the right
  */
