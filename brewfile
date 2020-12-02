@@ -1,0 +1,36 @@
+
+tap 'caskroom/cask'
+
+# Core Homebrew
+brew 'bat'
+brew 'bluetoothconnector'
+brew 'elixir'
+brew 'espanso'
+brew 'exa'
+brew 'exercism'
+brew 'fish'
+brew 'fnm'
+brew 'fzf'
+brew 'git'
+brew 'glow'
+brew 'gotop'
+brew 'gron'
+brew 'heroku'
+brew 'heroku-node'
+brew 'hugo'
+brew 'jq'
+brew 'mycli'
+brew 'neovim'
+brew 'reattach-to-user-namespace'
+brew 'ripgrep'
+brew 'sshuttle'
+brew 'tmux'
+brew 'tmuxinator'
+brew 'yadm'
+
+# Cask Apps
+cask 'alacritty'
+cask 'amethyst'
+cask 'phoenix'
+cask 'zotero'
+

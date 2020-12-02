@@ -25,45 +25,7 @@ matches:
       ```
       $|$
       ```
-
-  # Day  eval
-  - trigger: ":deva"
-    replace: |
-      ## Day eval
-      - what I learned: $|$
-      - memorable:
-
-  # Sprint Retro
-  - trigger: ":kalm"
-    replace: |
-      ## {{mytoday}}
-    
-      **Keep:**
-      - $|$
-
-      **Add:**
-      - write something here...
-
-      **Less:**
-      - write something here...
-
-      **More:**
-      - write something here...
-    vars:
-      - name: mytoday
-        type: date
-        params:
-          format: "%e %b %Y"
-
-  # Github
-  - trigger: ":gpr"
-    replace: |
-      **Changes**
-      - $|$
-
-      **Related Tasks**
-      - put hyperlinks here
-          
+  
   - trigger: ":today"
     replace: "{{mytoday}}"
     vars:
