@@ -7,4 +7,4 @@
 
 # Optional parameters:
 # @raycast.packageName Bluetooth
-bluetoothConnector --connect fc-a8-9a-fe-13-db --notify
+bluetoothConnector --disconnect fc-a8-9a-fe-13-db
