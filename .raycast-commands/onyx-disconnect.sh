@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Connect to Onyx Mini
+# @raycast.title Disconnect Onyx Mini
 # @raycast.mode silent
 
 # Optional parameters:
