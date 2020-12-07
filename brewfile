@@ -27,6 +27,7 @@ brew 'sshuttle'
 brew 'tmux'
 brew 'tmuxinator'
 brew 'yadm'
+brew 'pngpaste'
 
 # Cask Apps
 cask 'alacritty'

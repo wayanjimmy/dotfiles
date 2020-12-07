@@ -51,7 +51,6 @@
 (package! wakatime-mode)
 (package! org-super-agenda)
 (package! org-fancy-priorities)
-(package! org-pomodoro)
 (package! org-randomnote)
 (package! org-roam-server :recipe
   (:host github
@@ -60,5 +59,3 @@
 (package! md-roam
   :recipe (:host github
            :repo "nobiot/md-roam"))
-
-(package! org-download)

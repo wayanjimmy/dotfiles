@@ -29,9 +29,10 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq
- org_notes "~/JimboyLabs/resources/braindump/org"
+ org_notes "~/JimboyLabs/resources/roam/"
  org-directory org_notes
- org-roam-directory org_notes)
+ org-roam-directory org_notes
+ org-download-image-dir (concat org_notes "/images"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -131,3 +132,7 @@
 (use-package! md-roam ; load immediately, before org-roam
   :config
   (setq md-roam-file-extension-single "md"))
+
+(add-to-list 'load-path "~/Downloads/beancount-mode")
+(require 'beancount)
+(add-to-list 'auto-mode-alist '("\\.bean\\'" . beancount-mode))
