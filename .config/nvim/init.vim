@@ -237,7 +237,7 @@ call plug#end()
 "set termguicolors
 syntax enable
 colorscheme one
-set background=dark
+set background=light
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
