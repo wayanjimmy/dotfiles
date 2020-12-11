@@ -24,15 +24,16 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-one-light)       ;
+
+(custom-set-faces! '(default :background "#fafafa"))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq
  org_notes "~/JimboyLabs/resources/roam/"
  org-directory org_notes
- org-roam-directory org_notes
- org-download-image-dir (concat org_notes "/images"))
+ org-roam-directory org_notes)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -58,39 +59,21 @@
 (use-package! wakatime-mode
   :hook (after-init . global-wakatime-mode))
 
-(use-package org-journal
-  :bind
-  ("C-c n j" . org-journal-new-entry)
-  ("C-c n t" . org-journal-today)
-  :custom
-  (org-journal-dir org_notes)
-  (org-journal-date-prefix "#+TITLE: ")
-  (org-journal-file-format "%Y-%m-%d.org")
-  (org-journal-date-format "%A, %d %B %Y")
-  :config
-  (defun org-journal-today()
-    (interactive)
-    (org-journal-new-entry t)))
-
 (setq org-journal-enable-agenda-integration t)
 
 (use-package org-fancy-priorities
-  :ensure t
   :hook
   (org-mode . org-fancy-priorities-mode)
   :config
   (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
 
-(use-package org-roam-server
-  :ensure t)
+(use-package org-roam-server)
 
 (setq geiser-default-implementation 'racket)
 
 (setq org-babel-clojure-backend 'cider)
 
 (setq exec-path (append exec-path '("/var/folders/f1/3qjvc5895319405rbmrbcrd00000gn/T/fnm-shell-6566882/bin/node")))
-
-(setq org-roam-index-file "index.org")
 
 (use-package deft
   :after org
@@ -113,8 +96,7 @@
       org-pomodoro-start-sound (expand-file-name "/System/Library/Sounds/Blow.aiff"))
 (put 'erase-buffer 'disabled nil)
 
-(use-package! org-pomodoro
-  :ensure t)
+(use-package! org-pomodoro)
 (setq org-pomodoro-finished-sound-args "-volume 1.0")
 (setq org-pomodoro-long-break-sound-args "-volume 1.0")
 (setq org-pomodoro-short-break-sound-args "-volume 1.0")
@@ -122,7 +104,6 @@
 (custom-set-variables '(wakatime-api-key "051aaab1-d2eb-4366-b7f6-fccf41e1ef67"))
 
 (use-package org-randomnote
-  :ensure t
   :bind ("C-c r" . org-randomnote))
 
 (load-library "find-lisp")
@@ -136,3 +117,19 @@
 (add-to-list 'load-path "~/Downloads/beancount-mode")
 (require 'beancount)
 (add-to-list 'auto-mode-alist '("\\.bean\\'" . beancount-mode))
+
+(setq ob-mermaid-cli-path "~/JimboyLabs/resources/roam/node_modules/.bin/mmdc")
+
+(defun jimboy/org-screenshot-and-insert ()
+  (interactive)
+  (setq filename
+        (concat (make-temp-name (concat (file-name-nondirectory (buffer-file-name))
+                                        "images/"
+                                        (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+
+  (unless (file-exists-p (file-name-directory filename))
+    (make-directory (file-name-directory filename)))
+
+  (call-process "screencapture" nil nil nil "-i" filename)
+  (insert (concat "[[./" filename "]]"))
+  (org-display-inline-images))
