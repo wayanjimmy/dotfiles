@@ -15,7 +15,7 @@
   "go.useLanguageServer": true,
   "editor.minimap.enabled": false,
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "GitHub Light",
   "explorer.openEditors.visible": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

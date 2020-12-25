@@ -28,6 +28,7 @@ brew 'tmux'
 brew 'tmuxinator'
 brew 'yadm'
 brew 'pngpaste'
+brew 'git-delta'
 
 # Cask Apps
 cask 'alacritty'

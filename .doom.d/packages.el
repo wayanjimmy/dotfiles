@@ -56,7 +56,8 @@
   (:host github
    :repo "org-roam/org-roam-server"
    :branch "master"))
-(package! md-roam
-  :recipe (:host github
-           :repo "nobiot/md-roam"))
 (package! ob-mermaid)
+(package! org-pandoc-import
+  :recipe (:host github
+             :repo "tecosaur/org-pandoc-import"
+             :files ("*.el" "filters" "preprocessors")))

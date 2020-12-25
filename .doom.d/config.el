@@ -19,7 +19,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrains Mono" :size 14))
+(setq doom-font (font-spec :family "SF Mono" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -110,10 +110,6 @@
 (setq org-randomnote-candidates
       (find-lisp-find-files org_notes "\.org$"))
 
-(use-package! md-roam ; load immediately, before org-roam
-  :config
-  (setq md-roam-file-extension-single "md"))
-
 (add-to-list 'load-path "~/Downloads/beancount-mode")
 (require 'beancount)
 (add-to-list 'auto-mode-alist '("\\.bean\\'" . beancount-mode))
@@ -123,9 +119,7 @@
 (defun jimboy/org-screenshot-and-insert ()
   (interactive)
   (setq filename
-        (concat (make-temp-name (concat (file-name-nondirectory (buffer-file-name))
-                                        "images/"
-                                        (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+        (concat (make-temp-name (concat "images/" (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
 
   (unless (file-exists-p (file-name-directory filename))
     (make-directory (file-name-directory filename)))
@@ -133,3 +127,5 @@
   (call-process "screencapture" nil nil nil "-i" filename)
   (insert (concat "[[./" filename "]]"))
   (org-display-inline-images))
+
+(use-package! org-pandoc-import :after org)
