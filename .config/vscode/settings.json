@@ -1,0 +1,104 @@
+{
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.leader": ",",
+  "vim.useSystemClipboard": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.folding": true,
+  "editor.occurrencesHighlight": false,
+  "files.associations": { "*.blade.php": "html" },
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "GitHub Light",
+  "explorer.openEditors.visible": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "php-cs-fixer.executablePath": "/Users/jimboy/.composer/vendor/bin/php-cs-fixer",
+  "php-cs-fixer.lastDownload": 1585591268828,
+  "editor.accessibilitySupport": "off",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.statusBar.visible": true,
+  "editor.tabCompletion": "onlySnippets",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#ff00ff"
+    }
+  ],
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "workbench.activityBar.visible": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabCloseButton": "off",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "terminal.integrated.automationShell.linux": "",
+  "git.showInlineOpenFileAction": false,
+  "codetour.showMarkers": true,
+  "editor.rename.enablePreview": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.fontFamily": "JetBrains mono",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.grammar.customBlocks": {
+    "page-query": "graphql",
+    "static-query": "graphql"
+  },
+  "editor.matchBrackets": false,
+  "indenticator.color.dark": "rgba(255,255,255,.1)",
+  "workbench.colorCustomizations": {
+    // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference
+    "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "gitlens.mode.active": "review",
+  "terminal.integrated.fontSize": 13,
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "unknown", "pass", "skip"]
+}
