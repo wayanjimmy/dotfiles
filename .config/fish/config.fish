@@ -27,7 +27,8 @@ set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 set -x -U DENO_INSTALL $HOME/.local
 set -g -x PATH $PATH $DENO_INSTALL/bin
 
-source (pyenv init -|psub) source (rbenv init -|psub)
+source (pyenv init -|psub) 
+status --is-interactive; and source (rbenv init -|psub)
 
 set fish_greeting ""
 
@@ -78,6 +79,5 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
 zoxide init fish | source
 
 set -g -x PATH $HOME/.fnm $PATH
-fnm env --multi | source
 
 set -g fish_user_paths "/usr/local/opt/texinfo/bin" $fish_user_path
