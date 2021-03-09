@@ -31,7 +31,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq
- org_notes "~/JimboyLabs/resources/roam/"
+ org_notes "~/JimboyLabs/resources/brain/"
  org-directory org_notes
  org-roam-directory org_notes)
 
@@ -67,7 +67,10 @@
   :config
   (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
 
-(use-package org-roam-server)
+(use-package org-roam-server
+  :ensure t
+  :config
+  (setq org-roam-server-port 1111))
 
 (setq geiser-default-implementation 'racket)
 
@@ -114,7 +117,7 @@
 (require 'beancount)
 (add-to-list 'auto-mode-alist '("\\.bean\\'" . beancount-mode))
 
-(setq ob-mermaid-cli-path "~/JimboyLabs/resources/roam/node_modules/.bin/mmdc")
+(setq ob-mermaid-cli-path "~/JimboyLabs/resources/brain/node_modules/.bin/mmdc")
 
 (defun jimboy/org-screenshot-and-insert ()
   (interactive)
